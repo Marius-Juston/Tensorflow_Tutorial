@@ -1,6 +1,7 @@
 # Tensorflow Tutorial
 Tensorflow tutorial files.
 
+Go through tutorial files in this order:
 1) Tensors.py
 2) Constants.py
 3) Addition.py
