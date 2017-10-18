@@ -1,5 +1,7 @@
 import tensorflow as tf
 
+from Helper_Methods import open_tensorboard
+
 a = tf.placeholder(tf.float32)
 b = tf.placeholder(tf.float32)
 adder_node = a + b
@@ -14,3 +16,5 @@ add_and_triple = adder_node * 3.
 print(sess.run(add_and_triple, {a: 3, b: 4.5}))
 # produces the output
 # 22.5
+
+open_tensorboard(__file__, sess)

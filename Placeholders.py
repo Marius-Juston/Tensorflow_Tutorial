@@ -5,6 +5,8 @@ import tensorflow as tf
 
 # placeholder are different from variable as you assign the value to the placeholder manually in sess.run() while
 # variables are assigned directly in the contractor
+from Helper_Methods import open_tensorboard
+
 a = tf.placeholder(tf.float32)
 b = tf.placeholder(tf.float32)
 adder_node = a + b  # + provides a shortcut for tf.add(a, b)
@@ -23,3 +25,5 @@ print(sess.run(adder_node, {a: [1, 3], b: [2, 4]}))
 # Result
 # 7.5
 # [ 3.  7.]
+
+open_tensorboard(__file__, sess)

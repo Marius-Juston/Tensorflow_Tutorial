@@ -1,5 +1,7 @@
 import tensorflow as tf
 
+from Helper_Methods import open_tensorboard
+
 W = tf.Variable([.3], dtype=tf.float32)
 b = tf.Variable([-.3], dtype=tf.float32)
 x = tf.placeholder(tf.float32)
@@ -58,3 +60,5 @@ print("R2 Loss:", loss_value)
 # The final print shows the loss now is zero. 0.0 We guessed the "perfect" values of W and b, but the whole point of
 # machine learning is to find the correct model parameters automatically. We will show how to accomplish this in the
 # next section.
+
+open_tensorboard(__file__, sess)

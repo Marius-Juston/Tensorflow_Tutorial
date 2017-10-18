@@ -4,6 +4,8 @@
 
 import tensorflow as tf
 
+from Helper_Methods import open_tensorboard
+
 W = tf.Variable([.3], dtype=tf.float32)
 b = tf.Variable([-.3], dtype=tf.float32)
 x = tf.placeholder(tf.float32)
@@ -21,6 +23,7 @@ sess.run(init)
 
 # Since x is a placeholder, we can evaluate linear_model for several values of x simultaneously as follows:
 print(sess.run(linear_model, {x: [1, 2, 3, 4]}))
-
 # to produce the output
 # [ 0.          0.30000001  0.60000002  0.90000004]
+
+open_tensorboard(__file__, sess)
