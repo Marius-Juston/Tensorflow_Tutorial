@@ -6,8 +6,8 @@ import tensorflow as tf
 
 from Helper_Methods import open_tensorboard
 
-W = tf.Variable([.3], dtype=tf.float32)
-b = tf.Variable([-.3], dtype=tf.float32)
+W = tf.Variable(.3, dtype=tf.float32, name="weight")
+b = tf.Variable(-.3, dtype=tf.float32, name="biase")
 x = tf.placeholder(tf.float32)
 
 linear_model = W * x + b
