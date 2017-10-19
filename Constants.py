@@ -7,25 +7,17 @@ import tensorflow as tf
 # and it outputs a value it stores internally
 from Helper_Methods import open_tensorboard
 
+node1 = tf.constant(3.0, dtype=tf.float32)
+node2 = tf.constant(4.0)  # also tf.float32 implicitly
+print(node1, node2)
 
-def main():
-    node1 = tf.constant(3.0, dtype=tf.float32)
-    node2 = tf.constant(4.0)  # also tf.float32 implicitly
-    print(node1, node2)
+# The final print statement produces
+# Tensor("Const:0", shape=(), dtype=float32) Tensor("Const_1:0", shape=(), dtype=float32)
 
-    # The final print statement produces
-    # Tensor("Const:0", shape=(), dtype=float32) Tensor("Const_1:0", shape=(), dtype=float32)
+sess = tf.Session()
+print(sess.run([node1, node2]))
 
-    sess = tf.Session()
-    print(sess.run([node1, node2]))
+# we see the expected values of 3.0 and 4.0:
+# [3.0, 4.0]
 
-    # we see the expected values of 3.0 and 4.0:
-    # [3.0, 4.0]
-
-    open_tensorboard(__file__, sess)
-
-    print("End")
-
-
-if __name__ == '__main__':
-    main()
+open_tensorboard(__file__, sess)
