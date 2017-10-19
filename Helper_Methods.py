@@ -1,7 +1,24 @@
 import os
+import shutil
+import subprocess
+import sys
 
 import tensorflow as tf
 
+
+def start_tensorboard(directory):
+    tensorboard_path = sys.executable.replace("python.exe", "") + "Scripts\\tensorboard.exe"
+
+    command = "start http://localhost:6006/#graphs & " + sys.executable + " " + tensorboard_path + " --logdir=" + directory
+
+    # TODO safely quit command
+    s = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+
+    try:
+        s.wait(5)
+    except:
+        pass
+    s.terminate()
 
 def open_tensorboard(file_dir, tensorflow_session):
     if os.path.exists(file_dir):
@@ -10,19 +27,12 @@ def open_tensorboard(file_dir, tensorflow_session):
         if not os.path.exists(directory):
             os.makedirs(directory)
         else:
-            import shutil
-
             shutil.rmtree(directory)
             os.mkdir(directory)
 
         tf.summary.FileWriter(directory, tensorflow_session.graph)
 
-        import sys
+        start_tensorboard(directory)
 
-        python_path = sys.executable
-        tensorboard_path = sys.executable.replace("python.exe", "") + "Scripts\\tensorboard.exe"
-
-        os.system(
-            "start http://localhost:6006/#graphs & "
-            + python_path + " " + tensorboard_path + " --logdir=" + directory
-        )
+        return directory
+    return None
