@@ -4,17 +4,17 @@ Tensorflow tutorial files.
 Go through tutorial files in this order:
 
 1) Tensorflow components and Linear Regression
-    a)  Tensors.py
-    b)  Constants.py
-    c)  Operations.py
-    d)  Placeholders.py
-    e)  CombinedOperations.py
-    f)  Variables.py
-    g)  LossFunction.py
-    h)  Optimizers.py
-    i)  LinearRegressionModel.py
-    j) Estimator.py
-    k) CustomEstimator.py
+    1)  Tensors.py
+    2)  Constants.py
+    3)  Operations.py
+    4)  Placeholders.py
+    5)  CombinedOperations.py
+    6)  Variables.py
+    7)  LossFunction.py
+    8)  Optimizers.py
+    9)  LinearRegressionModel.py
+    10) Estimator.py
+    11) CustomEstimator.py
 
 2) Machine Learning using MNIST dataset
-    a) MNIST_For_ML_Beginners.py
+    1) MNIST_For_ML_Beginners.py
