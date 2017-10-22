@@ -1,7 +1,5 @@
 import tensorflow as tf
 
-from Helper_Methods import open_tensorboard
-
 W = tf.Variable([.3], dtype=tf.float32)
 b = tf.Variable([-.3], dtype=tf.float32)
 x = tf.placeholder(tf.float32)
@@ -27,10 +25,10 @@ loss = tf.reduce_sum(squared_deltas)
 optimizer = tf.train.GradientDescentOptimizer(0.01)
 train = optimizer.minimize(loss)
 
+
 sess.run(init)  # reset values to incorrect defaults.
 for i in range(1000):
-    t, summary = sess.run(train, {x: [1, 2, 3, 4], y: [0, -1, -2, -3]})
+    t = sess.run(train, {x: [1, 2, 3, 4], y: [0, -1, -2, -3]})
 
+# Prints out the found "perfect" values for the weight and bias given the training data
 print(sess.run([W, b]))
-
-open_tensorboard(__file__, sess)
