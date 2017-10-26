@@ -19,7 +19,7 @@ sess = tf.Session()
 # Feed dict are dictionary where the key (thing before the colon) is the variable you wish to assign a value to and
 # the value (on the right of the colon) is the value you want to assign the value of the variable
 
-print(sess.run(adder_node, {a: 3, b: 4.5}))
+print(sess.run(adder_node, feed_dict={a: 3, b: 4.5}))
 print(sess.run(adder_node, {a: [1, 3], b: [2, 4]}))
 
 # Result

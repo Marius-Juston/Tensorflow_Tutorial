@@ -20,7 +20,7 @@ sess.run(init)
 #  for linear regression, which sums the squares of the deltas between the current model and the provided data (r^2).
 # linear_model - y creates a vector where each element is the corresponding example's error delta. We call tf.square
 # to square that error. Then, we sum all the squared errors to create a single scalar that abstracts the error of all
-#  examples using tf.reduce_sum:
+#  Examples using tf.reduce_sum:
 
 # Values expected from tensor
 y = tf.placeholder(tf.float32)
@@ -55,7 +55,6 @@ loss_value, y_expected = sess.run([loss, linear_model], {x: [1, 2, 3, 4], y: EXP
 print("Expected y values y:", EXPECTED_LABELS)
 print("Returned y values:", y_expected)
 print("R2 Loss:", loss_value)
-
 
 # The final print shows the loss now is zero. 0.0 We guessed the "perfect" values of W and b, but the whole point of
 # machine learning is to find the correct model parameters automatically. We will show how to accomplish this in the

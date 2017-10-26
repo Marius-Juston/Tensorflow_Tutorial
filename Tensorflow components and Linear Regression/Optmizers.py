@@ -25,9 +25,8 @@ loss = tf.reduce_sum(squared_deltas)
 optimizer = tf.train.GradientDescentOptimizer(0.01)
 train = optimizer.minimize(loss)
 
-
 sess.run(init)  # reset values to incorrect defaults.
-for i in range(1000):
+for i in range(1000000):
     t = sess.run(train, {x: [1, 2, 3, 4], y: [0, -1, -2, -3]})
 
 # Prints out the found "perfect" values for the weight and bias given the training data

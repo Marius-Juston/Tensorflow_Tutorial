@@ -16,7 +16,7 @@ sess = tf.Session()
 addition_node = tf.add(node1, node2)
 
 # Can also use the + to add two nodes together
-# add_node = node1 + node2
+# addition_node = node1 + node2
 
 print("Addition")
 print("add_node:", addition_node)

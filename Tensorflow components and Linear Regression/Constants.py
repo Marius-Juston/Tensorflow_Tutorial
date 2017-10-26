@@ -1,8 +1,8 @@
 # The canonical import statement for TensorFlow programs is as follows:
-
+# This gives Python access to all of TensorFlow's classes, methods, and symbols.
 import tensorflow as tf
 
-# This gives Python access to all of TensorFlow's classes, methods, and symbols.
+from Helper_Methods import open_tensorboard
 
 # One type of node is a constant. Like all TensorFlow constants, it takes no inputs, and it outputs a value it stores
 #  internally
@@ -24,5 +24,6 @@ print(sess.run([node1, node2]))
 # we see the expected values of 3.0 and 4.0:
 # [3.0, 4.0]
 
-from Helper_Methods import open_tensorboard
+
+
 open_tensorboard(__file__, sess)
