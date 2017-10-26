@@ -1,3 +1,4 @@
+# coding=utf-8
 # NumPy is often used to load, manipulate and preprocess data.
 import numpy as np
 import tensorflow as tf

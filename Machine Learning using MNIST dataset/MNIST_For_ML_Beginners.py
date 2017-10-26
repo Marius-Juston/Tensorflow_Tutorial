@@ -1,3 +1,4 @@
+# coding=utf-8
 # --------------------------------------------------------------------------------------------#
 
 # Please read the following page: https://www.tensorflow.org/get_started/mnist/beginners before moving on to the code!!!

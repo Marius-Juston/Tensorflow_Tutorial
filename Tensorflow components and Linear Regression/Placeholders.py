@@ -1,3 +1,4 @@
+# coding=utf-8
 # A graph can be parametrized to accept external inputs, known as placeholders. A placeholder is a promise to
 # provide a value later.
 

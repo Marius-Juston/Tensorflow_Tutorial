@@ -1,3 +1,4 @@
+# coding=utf-8
 import tensorflow as tf
 
 from Helper_Methods import open_tensorboard

@@ -1,3 +1,4 @@
+# coding=utf-8
 # ------------------ CODE FROM Constants.py ------------------#
 import tensorflow as tf
 

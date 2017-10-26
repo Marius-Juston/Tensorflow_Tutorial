@@ -1,3 +1,4 @@
+# coding=utf-8
 import os
 import shutil
 import sys
@@ -45,7 +46,7 @@ kill_command = "taskkill /PID "
 result = None
 
 
-def enumWindowsProc(hwnd, lParam):
+def enum_windows_proc(hwnd, lParam):
     global search
     global result
 
@@ -58,8 +59,8 @@ def enumWindowsProc(hwnd, lParam):
             result = True
 
 
-def enumProcWnds(pid=None):
-    win32gui.EnumWindows(enumWindowsProc, pid)
+def enum_proc_wnds(pid=None):
+    win32gui.EnumWindows(enum_windows_proc, pid)
 
 
 search = None
@@ -74,7 +75,7 @@ def kill_all_already_running_tensorboard(search_title):
     for process in psutil.process_iter():
         try:
             if process.name() == u"cmd.exe":
-                enumProcWnds(process.pid)
+                enum_proc_wnds(process.pid)
 
                 if result:
                     result = False

@@ -24,6 +24,4 @@ print(sess.run([node1, node2]))
 # we see the expected values of 3.0 and 4.0:
 # [3.0, 4.0]
 
-
-
 open_tensorboard(__file__, sess)

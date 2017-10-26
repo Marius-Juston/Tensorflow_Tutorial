@@ -1,3 +1,4 @@
+# coding=utf-8
 # In machine learning we will typically want a model that can take arbitrary inputs, such as the one above. To make
 # the model trainable, we need to be able to modify the graph to get new outputs with the same input. Variables allow
 #  us to add trainable parameters to a graph. They are constructed with a type and initial value:

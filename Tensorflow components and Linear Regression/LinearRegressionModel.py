@@ -1,3 +1,4 @@
+# coding=utf-8
 # The completed trainable linear regression model is shown here:
 
 import tensorflow as tf
